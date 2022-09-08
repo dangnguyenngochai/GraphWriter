@@ -38,7 +38,7 @@ class lseq_encode(nn.Module):
       e = learned_emb
     sent_lens, idxs = ilens.sort(descending=True)
     e = e.index_select(0,idxs)
-    e = pack_padded_sequence(e,sent_lens,batch_first=True)
+    e = pack_padded_sequence(e,sent_lens.cpu(),batch_first=True)
     e, (h,c) = self.encoder(e)
     e = pad_packed_sequence(e,batch_first=True)[0]
     e = torch.zeros_like(e).scatter(0,idxs.unsqueeze(1).unsqueeze(1).expand(-1,e.size(1),e.size(2)),e)

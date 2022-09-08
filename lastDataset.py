@@ -1,7 +1,7 @@
 import torch
 from collections import Counter
 import dill
-from torchtext import data
+from torchtext.legacy import data
 import pargs as arg
 from copy import copy
 
