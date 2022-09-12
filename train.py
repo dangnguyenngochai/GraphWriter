@@ -67,6 +67,7 @@ def evaluate(m,ds,args):
     if ex == 0:
       g = p[0].max(1)[1]
       print(ds.reverse(g,b.rawent[0]))
+      print("Catch this: ",  b.rawent[0])
     loss += l.item() * len(b.tgt)
     ex += len(b.tgt)
   loss = loss/ex
