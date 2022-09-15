@@ -4,7 +4,7 @@
   - "entities" extracted
   - "entities type" following the order of "entities"
   - "text" is the equivalent text with placeholders of entities
-  - the last part is the appearance order of the "entities", although the authors stated in [this](!https://github.com/rikdz/GraphWriter/issues/4) that the field is not used
+  - the last part is the appearance order of the "entities", although the authors stated in [this](https://github.com/rikdz/GraphWriter/issues/4) that the field is not used
 
 - `lastGraph2_sents.tsv` and order `preprocess*` seem to be the same, but only the later is used in code
 
