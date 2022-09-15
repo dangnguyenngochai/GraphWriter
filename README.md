@@ -1,3 +1,13 @@
+# Update
+- Data formatted and processed in `preprocessed.[train|val|test].tsv` include the following fields:
+  - "title" of the papper
+  - "entities" extracted
+  - "entities type" following the order of "entities"
+  - "text" is the equivalent text with placeholders of entities
+  - the last part is the appearance order of the "entities", although the authors stated in [this](!https://github.com/rikdz/GraphWriter/issues/4) that the field is not used
+
+- `lastGraph2_sents.tsv` and order `preprocess*` seem to be the same, but only the later is used in code
+
 # Text Generation from Knowledge Graphs with Graph Transformers
 
 This repository contains the source code of our paper, [Text Generation from Knowledge Graphs with Graph Transformers](https://arxiv.org/abs/1904.02342), which is accepted for publication at [NAACL 2019](http://naacl2019.org/).

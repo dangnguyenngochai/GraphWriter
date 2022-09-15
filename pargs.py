@@ -67,6 +67,7 @@ def pargs():
   #parser.add_argument('-max_grad_norm', type=int, default=1)
 
   #data
+  #note: relations vocabulary and entities vocabulary is seperated ???
   parser.add_argument("-nosave",action='store_false',help='dont save')
   parser.add_argument("-save",required=True,help="where to save model")
   parser.add_argument("-outunk",default=5,type=int,help="unk @ for targets")

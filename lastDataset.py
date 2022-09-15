@@ -142,7 +142,6 @@ class dataset:
     b.ent = (ent,phlens,elens)
     return b
 
-
   def adjToBatch(self,adj):
     lens = [x.size(0) for x in adj]
     m = max([x.size(1) for x in adj])
@@ -271,9 +270,6 @@ class dataset:
     data = [self.pad(x.transpose(0,1),m).transpose(0,1) for x in data]
     data = torch.cat(data,0)
     return data,lens
-
-
-    
 
   def rev_rel(self,ebatch,rbatch):
     vocab = self.ENT.vocab
